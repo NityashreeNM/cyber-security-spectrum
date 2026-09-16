@@ -1,474 +1,500 @@
-Identity and Access Management — IAM
+OT and ICS Security
 
-1. Overview
+Overview
 
-Identity and Access Management focuses on ensuring that the right person, device, application, or service gets the right access to the right resource at the right time.
+Operational Technology (OT) and Industrial Control Systems (ICS) security focuses on protecting systems that monitor and control physical processes in industries such as manufacturing, energy, water treatment, healthcare, transportation, and critical infrastructure.
 
-IAM is a core cybersecurity domain used in:
+Unlike traditional IT security, OT security must prioritize:
 
-- Enterprise IT
-- Cloud security
-- IoT security
-- OT and ICS security
-- Product security
-- Zero Trust Architecture
-- Security Operations
+- Safety of people and processes
+- Availability and reliability
+- Real-time operations
+- Equipment protection
+- Process integrity
+- Secure remote access
+- Business continuity
 
----
+1. OT and ICS Fundamentals
 
-2. IAM Fundamentals
+What is OT?
 
-Key Concepts
-
-- Identity
-- Authentication
-- Authorization
-- Accountability
-- Access control
-- Privileged access
-- Identity lifecycle
-- Least privilege
-- Separation of duties
-- Zero Trust
-
-Authentication Factors
-
-1. Something you know
-   
-   - Password
-   - PIN
-
-2. Something you have
-   
-   - Smart card
-   - Hardware token
-   - Mobile authenticator
-
-3. Something you are
-   
-   - Fingerprint
-   - Face recognition
-
-Authentication Methods
-
-- Password-based authentication
-- Multi-factor authentication
-- Certificate-based authentication
-- Biometric authentication
-- Single Sign-On
-- Federation
-- Adaptive authentication
-
----
-
-3. Authorization Models
-
-Role-Based Access Control — RBAC
-
-Access is assigned based on a user's role.
+Operational Technology includes hardware and software used to monitor, control, and operate physical equipment and industrial processes.
 
 Examples:
 
-- Administrator
-- Security Analyst
-- Developer
-- Operator
-- Auditor
+- Industrial machines
+- Sensors and actuators
+- PLCs
+- SCADA systems
+- Distributed Control Systems
+- Safety Instrumented Systems
+- Industrial networks
+- Building automation systems
 
-Attribute-Based Access Control — ABAC
+What is ICS?
 
-Access is granted based on attributes such as:
+Industrial Control Systems are systems used to control and monitor industrial processes.
 
-- User identity
-- Device security status
-- Location
-- Time
-- Resource sensitivity
-- Business context
+Common ICS environments include:
 
-Mandatory Access Control — MAC
+- Manufacturing plants
+- Power generation and distribution
+- Oil and gas facilities
+- Water treatment plants
+- Chemical industries
+- Transportation systems
+- Healthcare facilities
 
-Access is controlled through centrally defined security labels and policies.
+2. Main ICS Components
 
-Discretionary Access Control — DAC
+Sensors
 
-Resource owners can decide who gets access.
+Collect physical data such as:
 
----
+- Temperature
+- Pressure
+- Flow
+- Level
+- Vibration
+- Humidity
 
-4. IAM Lifecycle
+Actuators
 
-Joiner
+Perform physical actions such as:
 
-When a new employee or user joins:
+- Opening or closing valves
+- Starting or stopping motors
+- Controlling pumps
+- Adjusting temperature
+- Moving industrial equipment
 
-- Create identity
-- Assign role
-- Provide required access
-- Enforce MFA
-- Register approved devices
+PLC — Programmable Logic Controller
 
-Mover
+A PLC is an industrial computer that executes control logic and interacts with sensors and actuators.
 
-When a user changes role:
+RTU — Remote Terminal Unit
 
-- Review existing permissions
-- Remove unnecessary access
-- Assign new role-based access
-- Update privileged permissions
+An RTU collects field data and communicates with a central control system, especially in geographically distributed environments.
 
-Leaver
+HMI — Human Machine Interface
 
-When a user leaves:
+An HMI allows operators to monitor processes and interact with industrial equipment.
 
-- Disable account
-- Revoke sessions
-- Revoke tokens and certificates
-- Remove group memberships
-- Recover company devices
-- Review service and application access
+SCADA — Supervisory Control and Data Acquisition
 
----
+SCADA systems provide:
 
-5. Privileged Access Management — PAM
+- Supervisory monitoring
+- Data collection
+- Alarm management
+- Remote control
+- Historical data visualization
 
-Privileged accounts have elevated permissions and require stronger controls.
+DCS — Distributed Control System
 
-PAM Controls
+A DCS is commonly used in continuous industrial processes such as:
 
-- Separate administrator accounts
-- Just-in-time access
-- Just-enough access
-- Privileged session monitoring
-- Password vaulting
-- Approval workflows
-- Session recording
-- Emergency access controls
-- Regular privilege reviews
+- Chemical plants
+- Refineries
+- Power plants
+- Pharmaceutical manufacturing
 
-Examples of privileged identities:
+SIS — Safety Instrumented System
 
-- Domain Administrator
-- Cloud Administrator
-- Root user
-- Database Administrator
-- OT Engineering Workstation Administrator
+A Safety Instrumented System is designed to bring a process to a safe state when dangerous conditions occur.
 
----
+3. OT vs IT Security
 
-6. IAM in Cloud Security
+Area| IT Security| OT Security
+Main priority| Confidentiality| Safety and availability
+System changes| Frequent| Carefully controlled
+Downtime| Usually manageable| May be dangerous or expensive
+Patch management| Regular patching| Risk-based patching
+System lifespan| Often shorter| Often 10–30 years
+Environment| Enterprise systems| Physical processes
+Security testing| More flexible| Must avoid process disruption
+Incident impact| Data loss or service outage| Safety, equipment, and production impact
 
-Important cloud IAM concepts:
+4. Industrial Network Architecture
 
-- Users
-- Groups
-- Roles
-- Policies
-- Service accounts
-- Managed identities
-- Temporary credentials
-- Federation
-- Conditional access
-- Workload identity
+Common Network Layers
 
-Cloud IAM Security Practices
+1. Enterprise IT Network
+2. Industrial DMZ
+3. Supervisory Network
+4. Control Network
+5. Cell/Area Zone
+6. Field Network
+7. Sensors and Actuators
 
-- Avoid permanent access keys
-- Use temporary credentials
-- Enable MFA
-- Apply least privilege
-- Review unused permissions
-- Separate production and development access
-- Monitor privileged activities
-- Protect service accounts
-- Use centralized identity governance
+Purdue Enterprise Reference Architecture
 
----
+The Purdue Model helps separate enterprise IT systems from industrial control systems.
 
-7. IAM in IoT and Product Security
+Typical levels include:
 
-IoT devices may contain different identities:
+- Level 0: Physical process
+- Level 1: Sensors and actuators
+- Level 2: Basic control systems
+- Level 3: Site operations and control
+- Level 3.5: Industrial DMZ
+- Level 4: Enterprise IT systems
+- Level 5: Enterprise network
 
-- Device identity
-- User identity
-- Application identity
-- Gateway identity
-- Cloud service identity
-- Manufacturer identity
+5. Industrial Communication Protocols
 
-IoT IAM Controls
+Important industrial protocols include:
 
-- Unique identity per device
-- Mutual TLS
-- Device certificates
-- Secure key storage
-- Certificate rotation
-- Device onboarding
-- Device decommissioning
-- Secure credential provisioning
-- Device authorization
-- API authentication
+- Modbus TCP
+- Modbus RTU
+- DNP3
+- OPC UA
+- OPC Classic
+- EtherNet/IP
+- PROFINET
+- PROFIBUS
+- IEC 60870-5-104
+- IEC 61850
+- MQTT
+- BACnet
+- CAN bus
 
-Avoid:
+Security Questions for Protocols
 
-- Shared default passwords
-- Hardcoded credentials
-- Reused certificates
-- Permanent device secrets
-- Unauthenticated APIs
+For every protocol, understand:
 
----
+- Is authentication supported?
+- Is encryption supported?
+- Is message integrity protected?
+- Can commands be replayed?
+- Can unauthorized users write values?
+- Is the protocol legacy or modern?
+- What compensating controls are required?
 
-8. IAM in OT and ICS Security
+6. OT Threat Landscape
 
-OT environments require special consideration because availability and safety are critical.
+Common OT security threats include:
 
-OT IAM Controls
+- Unauthorized remote access
+- Ransomware affecting production
+- Malware entering through IT networks
+- Compromised engineering workstations
+- Manipulation of PLC logic
+- Unauthorized changes to HMI screens
+- Weak passwords
+- Exposed industrial services
+- Insecure vendor access
+- USB-based malware
+- Network misconfiguration
+- Denial-of-service attacks
+- Loss of visibility into industrial assets
+- Manipulation of sensor values
+- Unsafe process commands
 
-- Individual operator accounts
-- Controlled engineering workstation access
-- Strong authentication for remote access
+7. OT Threat Modeling
+
+Threat modeling helps identify how attackers could affect industrial systems and physical processes.
+
+Useful Approaches
+
+- STRIDE
+- STRIDE-OT
+- MITRE ATT&CK for ICS
+- Attack trees
+- Data Flow Diagrams
+- Cyber Kill Chain
+- Zones and Conduits analysis
+- Safety and security risk assessment
+
+Threat Modeling Questions
+
+- What are the critical assets?
+- What physical process does each asset control?
+- Who can access the system?
+- What happens if the system is unavailable?
+- What happens if the process data is manipulated?
+- Can an attacker change PLC logic?
+- Can remote access bypass security controls?
+- What is the safety impact?
+- What is the recovery process?
+
+8. IEC 62443 Concepts
+
+IEC 62443 is a major cybersecurity standards family for industrial automation and control systems.
+
+Important concepts include:
+
+- Asset owners
+- Product suppliers
+- System integrators
+- Security lifecycle
+- Zones and conduits
+- Security levels
+- Defense in depth
+- Secure development
+- Risk-based security requirements
+
+Zones
+
+A zone is a group of assets with similar security requirements.
+
+Conduits
+
+A conduit is a controlled communication path between zones.
+
+Defense in Depth
+
+Security should be implemented using multiple layers such as:
+
+- Network segmentation
+- Firewalls
+- Access control
+- Monitoring
+- Secure configuration
+- Application allowlisting
+- Backup and recovery
+- Physical security
+- Incident response
+
+9. OT Security Architecture
+
+A secure OT architecture may include:
+
+- IT/OT network segmentation
+- Industrial DMZ
+- Firewalls between zones
 - Jump servers
 - Privileged access management
-- Vendor access approval
-- Time-bound remote access
-- Session recording
-- Access review
-- Break-glass procedures
-- Offline recovery accounts
+- Multi-factor authentication for remote access
+- Secure vendor access
+- Network monitoring
+- Asset inventory
+- Passive network discovery
+- Centralized logging
+- Secure backup systems
+- Application allowlisting
+- Endpoint protection where supported
+- Strict USB controls
+- Time synchronization
+- Redundant systems
+- Manual fallback procedures
 
-OT-Specific Considerations
+10. OT Asset Inventory
 
-- Some legacy systems may not support modern authentication
-- Safety systems require carefully controlled access
-- Authentication changes must be tested before deployment
-- Remote access should be disabled when not required
-- Shared accounts should be minimized and monitored
-- Emergency access must be documented and reviewed
+Maintain an inventory of:
+
+- PLCs
+- RTUs
+- HMIs
+- SCADA servers
+- Engineering workstations
+- Historians
+- Network switches
+- Firewalls
+- Sensors
+- Actuators
+- Safety systems
+- Remote access devices
+- Firmware versions
+- Operating systems
+- Communication protocols
+- Asset owners
+- Criticality
+- Network location
+
+11. OT Vulnerability Management
+
+OT vulnerability management must consider operational risk.
+
+Recommended Process
+
+1. Identify assets
+2. Classify asset criticality
+3. Identify vulnerabilities
+4. Check vendor advisories
+5. Assess exploitability
+6. Understand process impact
+7. Select mitigation
+8. Test changes
+9. Schedule maintenance
+10. Verify the result
+11. Document residual risk
+
+Possible Mitigations
+
+- Network segmentation
+- Firewall rules
+- Disable unused services
+- Strong authentication
+- Application allowlisting
+- Compensating controls
+- Vendor-approved patches
+- Monitoring and alerting
+- Restricted physical access
+
+12. OT Incident Response
+
+An OT incident response plan should include:
+
+Preparation
+
+- Asset inventory
+- Contact lists
+- Backup validation
+- Recovery procedures
+- Communication plans
+- Vendor escalation process
+- Manual operation procedures
+
+Detection and Analysis
+
+- Identify abnormal commands
+- Investigate unusual remote access
+- Review network traffic
+- Check PLC logic changes
+- Review HMI and engineering workstation activity
+- Identify affected processes
+
+Containment
+
+- Isolate affected network segments
+- Disable compromised remote access
+- Block malicious communication
+- Preserve evidence
+- Avoid unsafe shutdowns
+
+Recovery
+
+- Restore trusted configurations
+- Validate PLC logic
+- Recover systems safely
+- Test process functionality
+- Monitor for recurrence
+- Document lessons learned
+
+13. OT Product Security
+
+Product security for industrial products should include:
+
+- Secure product architecture
+- Threat modeling
+- Secure coding
+- Security requirements
+- Vulnerability management
+- Secure update mechanisms
+- Identity and access management
+- Secure boot where applicable
+- Firmware signing
+- Logging and monitoring
+- Security documentation
+- SBOM management
+- Coordinated vulnerability disclosure
+- Security lifecycle management
+
+14. OT Security Labs
+
+Practice labs can include:
+
+- Building a small virtual OT network
+- Creating an IT/OT segmentation diagram
+- Simulating a PLC and HMI environment
+- Exploring Modbus communication
+- Capturing industrial traffic using Wireshark
+- Identifying insecure commands
+- Creating firewall rules
+- Designing an Industrial DMZ
+- Mapping assets using a spreadsheet
+- Creating a Purdue Model architecture
+- Performing STRIDE-OT threat modeling
+- Mapping threats to MITRE ATT&CK for ICS
+- Designing an IEC 62443 zones-and-conduits model
+- Creating an OT incident response playbook
+- Developing a secure remote access architecture
+
+15. Practical Projects
+
+Project 1: Secure Manufacturing Network
+
+Design a secure network for a manufacturing plant with:
+
+- PLCs
+- HMIs
+- SCADA server
+- Engineering workstation
+- Historian
+- Industrial firewall
+- Industrial DMZ
+- Enterprise network
+
+Project 2: Modbus Security Assessment
+
+Study:
+
+- Modbus request and response
+- Read and write operations
+- Lack of native authentication
+- Network exposure risks
+- Compensating controls
+
+Project 3: OT Threat Model
+
+Create a threat model for a water treatment plant.
+
+Include:
+
+- Critical assets
+- Data flows
+- Threat actors
+- Attack paths
+- Safety impact
+- Security controls
+- Recovery actions
+
+Project 4: Product Security Architecture
+
+Create a security architecture for an IoT-to-OT gateway.
+
+Include:
+
+- Device identity
+- Secure communication
+- Certificate management
+- Secure boot
+- Firmware updates
+- Access control
+- Logging
+- Cloud connectivity
+- Industrial network segmentation
+
+16. Learning Goals
+
+By completing this section, you should be able to:
+
+- Explain OT and ICS architecture
+- Identify major ICS components
+- Understand industrial protocols
+- Compare IT and OT security
+- Design basic OT network segmentation
+- Use the Purdue Model
+- Apply STRIDE-OT concepts
+- Use MITRE ATT&CK for ICS
+- Understand IEC 62443 concepts
+- Perform basic OT asset classification
+- Design secure remote access
+- Develop an OT incident response plan
+- Explain OT product security requirements
+- Create a CPS security architecture
+
+17. References
+
+- IEC 62443
+- NIST Cybersecurity Framework
+- NIST SP 800-82
+- MITRE ATT&CK for ICS
+- CISA ICS Security Guidance
+- Purdue Enterprise Reference Architecture
+- ISA industrial cybersecurity guidance
 
 ---
 
-9. Zero Trust and IAM
-
-Zero Trust assumes that no user, device, application, or network should be trusted automatically.
-
-Zero Trust IAM Principles
-
-- Verify explicitly
-- Use least-privilege access
-- Continuously evaluate risk
-- Authenticate users and devices
-- Validate device posture
-- Segment sensitive resources
-- Monitor access continuously
-- Revoke access when risk changes
-
-Example
-
-A user may be allowed to access a production system only when:
-
-- The user identity is verified
-- MFA is completed
-- The device is compliant
-- The user has the required role
-- The request is within an approved time window
-- The session is monitored
-
----
-
-10. IAM Threats
-
-Common IAM-related threats include:
-
-- Credential theft
-- Password spraying
-- Brute-force attacks
-- Phishing
-- Session hijacking
-- Token theft
-- Privilege escalation
-- Account takeover
-- Excessive permissions
-- Orphaned accounts
-- Insider misuse
-- Shared credentials
-- Compromised service accounts
-- Misconfigured cloud policies
-- Unprotected API keys
-
----
-
-11. IAM Security Controls
-
-Preventive Controls
-
-- MFA
-- Strong password policy
-- Least privilege
-- Role-based access
-- Privileged access management
-- Network restrictions
-- Secure credential storage
-
-Detective Controls
-
-- Login monitoring
-- Failed authentication alerts
-- Privilege escalation alerts
-- Impossible-travel detection
-- Abnormal access detection
-- Privileged session monitoring
-
-Corrective Controls
-
-- Account lockout
-- Token revocation
-- Password reset
-- Session termination
-- Access removal
-- Incident response
-- Credential rotation
-
----
-
-12. IAM Architecture Components
-
-A typical IAM architecture may include:
-
-- Identity Provider — IdP
-- Directory Service
-- Authentication Service
-- Authorization Service
-- Single Sign-On
-- Multi-Factor Authentication
-- Privileged Access Management
-- Identity Governance
-- Access Review
-- Security Information and Event Management
-- Endpoint Security
-- Policy Enforcement Point
-
----
-
-13. Practical Labs
-
-Beginner Labs
-
-- Create Linux users
-- Create Linux groups
-- Configure file permissions
-- Configure sudo access
-- Review login logs
-- Disable unused accounts
-- Configure SSH key authentication
-
-Intermediate Labs
-
-- Configure a local identity directory
-- Implement RBAC
-- Create an access matrix
-- Configure MFA in a test environment
-- Analyze authentication logs
-- Build a basic access review process
-- Detect repeated failed logins
-
-Advanced Labs
-
-- Design cloud IAM policies
-- Build a Zero Trust access flow
-- Design privileged remote access for OT
-- Create an IoT device identity lifecycle
-- Model an IAM threat scenario
-- Design identity monitoring and incident response
-- Create a product security IAM architecture
-
----
-
-14. IAM Project Ideas
-
-Project 1: Enterprise Access Matrix
-
-Create an access matrix for:
-
-- HR
-- Finance
-- IT
-- Security
-- Engineering
-- Management
-
-Document:
-
-- Role
-- Resource
-- Access type
-- Approval authority
-- Review frequency
-
-Project 2: Secure Remote Access Architecture
-
-Design secure remote access for an OT environment using:
-
-- MFA
-- VPN or zero trust access
-- Jump server
-- PAM
-- Session monitoring
-- Time-bound access
-- Approval workflow
-
-Project 3: IoT Device Identity Lifecycle
-
-Design the lifecycle of an IoT device:
-
-1. Manufacturing
-2. Provisioning
-3. Onboarding
-4. Authentication
-5. Certificate rotation
-6. Maintenance
-7. Decommissioning
-
-Project 4: IAM Threat Model
-
-Use STRIDE to analyse:
-
-- Credential theft
-- Token theft
-- Privilege escalation
-- Identity spoofing
-- Unauthorized access
-- Account takeover
-
----
-
-15. Career Relevance
-
-IAM knowledge is important for roles such as:
-
-- Cybersecurity Architect
-- Product Security Architect
-- Cloud Security Architect
-- IAM Engineer
-- Zero Trust Architect
-- IoT Security Architect
-- OT Security Architect
-- Security Consultant
-- Security Operations Engineer
-
----
-
-16. Learning Outcome
-
-After completing this domain, you should be able to:
-
-- Explain authentication and authorization
-- Design RBAC and ABAC models
-- Understand privileged access management
-- Build an identity lifecycle process
-- Secure cloud identities
-- Secure IoT device identities
-- Design IAM for OT environments
-- Apply Zero Trust principles
-- Identify IAM-related threats
-- Create IAM architecture and access-control documentation
+Focus: Safety-first security architecture for cyber-physical systems, industrial automation, and critical infrastructure.
