@@ -660,3 +660,29 @@ By completing this section, you should be able to:
 ---
 
 Focus: Secure identities, controlled access, least privilege, and Zero Trust across enterprise IT, cloud, IoT, OT, and cyber-physical systems.
+
+## Learning Outcome
+
+After completing this section, you should be able to:
+
+- Explain identity, authentication, authorization, and accounting
+- Understand the IAM lifecycle
+- Apply the principle of least privilege
+- Design RBAC and ABAC models
+- Explain MFA, SSO, and identity federation
+- Understand Privileged Access Management
+- Secure service accounts and machine identities
+- Apply IAM principles to cloud, IoT, OT, and CPS environments
+- Understand IAM in Zero Trust Architecture
+- Identify common IAM threats
+- Design basic IAM security controls
+- Create an IAM architecture for enterprise and product security
+
+## Conclusion
+
+Identity and Access Management is the foundation of secure access across modern digital and cyber-physical environments.
+
+Strong IAM practices reduce unauthorized access, privilege misuse, credential compromise, and identity-related security risks.
+
+**Cyber Security Spectrum by Nityashree**  
+*Building strong cybersecurity foundations for secure digital and cyber-physical systems.*
