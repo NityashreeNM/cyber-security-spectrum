@@ -1,4 +1,6 @@
-Identity and Access Management
+# Cyber Security Spectrum by Nityashree
+
+## 09. Identity and Access Management
 
 Overview
 
