@@ -105,15 +105,19 @@ A Safety Instrumented System is designed to bring a process to a safe state when
 
 3. OT vs IT Security
 
-Area| IT Security| OT Security
-Main priority| Confidentiality| Safety and availability
-System changes| Frequent| Carefully controlled
-Downtime| Usually manageable| May be dangerous or expensive
-Patch management| Regular patching| Risk-based patching
-System lifespan| Often shorter| Often 10–30 years
-Environment| Enterprise systems| Physical processes
-Security testing| More flexible| Must avoid process disruption
-Incident impact| Data loss or service outage| Safety, equipment, and production impact
+
+OT vs IT Security
+
+Area	--- IT Security ---	 OT Security
+1.Main priority --- 	Confidentiality ----	Safety and availability
+2.System changes	---Frequent---	Carefully controlled
+3.Downtime---	Usually manageable	---May be dangerous or expensive
+4 Patch management---	Regular patching---	Risk-based patching
+5.System lifespan	---Often shorter---	Often 10–30 years
+6.Environment---	Enterprise systems	---Physical processes
+7.Security testing---	More testing---Must avoid process disruption
+8.Incident impact	---Data loss or service outage---	Safety, equipment, and production impact
+
 
 4. Industrial Network Architecture
 
