@@ -1,0 +1,1396 @@
+# Cyber Security Spectrum by Nityashree
+
+# Threat Intelligence and Threat Hunting
+
+*Building strong cybersecurity foundations for secure digital and cyber-physical systems.*
+
+---
+
+## 1. Overview
+
+Threat Intelligence and Threat Hunting are essential cybersecurity capabilities used to identify, understand, detect, investigate, and respond to cyber threats.
+
+Threat Intelligence provides structured knowledge about threat actors, attack techniques, indicators, vulnerabilities, campaigns, and emerging risks.
+
+Threat Hunting is the proactive process of searching for malicious activity, suspicious behavior, and hidden threats that may not have been detected by existing security controls.
+
+Together, they support:
+
+- Proactive threat detection
+- Security monitoring
+- Incident investigation
+- Detection engineering
+- Vulnerability prioritization
+- Risk-based decision-making
+- Incident response
+- Security operations maturity
+- Enterprise resilience
+- Industrial and cyber-physical system protection
+
+Threat Intelligence and Threat Hunting are applicable across:
+
+- Enterprise IT
+- Cloud environments
+- Applications
+- IoT ecosystems
+- OT and ICS environments
+- Critical infrastructure
+- Product security
+- National infrastructure
+- Managed security services
+- Security operations centers
+
+---
+
+## 2. Objectives
+
+The objectives of Threat Intelligence and Threat Hunting include:
+
+- Understand the threat landscape.
+- Identify relevant threat actors and campaigns.
+- Analyze attacker behavior and techniques.
+- Collect and validate threat intelligence.
+- Convert intelligence into actionable security controls.
+- Detect abnormal and malicious activity.
+- Investigate suspicious events.
+- Improve detection rules and security analytics.
+- Reduce attacker dwell time.
+- Support incident response activities.
+- Improve organizational security posture.
+- Protect critical business and operational assets.
+
+---
+
+## 3. Threat Intelligence Fundamentals
+
+Threat Intelligence is evidence-based knowledge that helps organizations understand:
+
+- Who may attack.
+- Why an attack may occur.
+- How an attack may be performed.
+- Which assets may be targeted.
+- What indicators may be observed.
+- What defensive actions should be taken.
+
+Threat Intelligence should be:
+
+- Relevant
+- Accurate
+- Timely
+- Actionable
+- Contextual
+- Reliable
+- Measurable
+- Appropriate for the intended audience
+
+Threat Intelligence should not be treated as a collection of unverified indicators. It should provide context, confidence, business relevance, and recommended actions.
+
+---
+
+## 4. Types of Threat Intelligence
+
+### 4.1 Strategic Threat Intelligence
+
+Strategic intelligence supports senior leadership, business decision-makers, and risk owners.
+
+It focuses on:
+
+- Long-term threat trends
+- Geopolitical developments
+- Industry-specific threats
+- Business risk
+- Critical infrastructure risks
+- Threat actor motivations
+- Cybersecurity investment decisions
+- Regulatory and operational impact
+
+Typical audience:
+
+- Board members
+- Chief Information Security Officer
+- Chief Risk Officer
+- Business leaders
+- Enterprise architects
+- Security leadership
+
+---
+
+### 4.2 Operational Threat Intelligence
+
+Operational intelligence focuses on threat campaigns, attack activities, and adversary operations.
+
+It helps answer:
+
+- Which threat actors are active?
+- Which organizations or sectors are being targeted?
+- What attack campaigns are occurring?
+- What attack methods are being used?
+- What infrastructure is associated with the campaign?
+
+Typical audience:
+
+- Threat intelligence analysts
+- Incident responders
+- Security operations teams
+- Threat hunters
+- Detection engineers
+
+---
+
+### 4.3 Tactical Threat Intelligence
+
+Tactical intelligence focuses on attacker techniques, tactics, and procedures.
+
+It includes:
+
+- Attack techniques
+- Attack patterns
+- Malware behavior
+- Command-and-control methods
+- Credential theft methods
+- Persistence techniques
+- Lateral movement
+- Data collection
+- Exfiltration methods
+
+Typical audience:
+
+- SOC analysts
+- Threat hunters
+- Detection engineers
+- Incident responders
+- Security architects
+
+---
+
+### 4.4 Technical Threat Intelligence
+
+Technical intelligence includes observable technical indicators such as:
+
+- IP addresses
+- Domain names
+- URLs
+- File hashes
+- Email addresses
+- Malware samples
+- Registry keys
+- File paths
+- User agents
+- Network patterns
+- Certificate information
+
+Technical indicators should be validated and analyzed in context before being used in production security controls.
+
+---
+
+## 5. Threat Intelligence Lifecycle
+
+A typical Threat Intelligence lifecycle includes:
+
+1. Planning and direction
+2. Collection
+3. Processing
+4. Analysis
+5. Dissemination
+6. Feedback
+7. Continuous improvement
+
+### 5.1 Planning and Direction
+
+Define:
+
+- Intelligence requirements
+- Business priorities
+- Critical assets
+- Threat scenarios
+- Target industries
+- Intended consumers
+- Required intelligence frequency
+- Decision-making requirements
+
+Examples of intelligence requirements:
+
+- Which threats target industrial control systems?
+- Which ransomware groups target the manufacturing sector?
+- Which cloud attack techniques affect the organization?
+- Which vulnerabilities are actively exploited?
+- Which threat actors target the organization’s geographic region?
+
+---
+
+### 5.2 Collection
+
+Threat intelligence may be collected from:
+
+- Security vendors
+- Government advisories
+- CERT organizations
+- Industry information-sharing groups
+- Threat research reports
+- Malware analysis
+- Internal security logs
+- Incident response investigations
+- Vulnerability intelligence
+- Open-source intelligence
+- Dark web monitoring services
+- Network telemetry
+- Endpoint telemetry
+- Cloud security platforms
+
+Collection should follow legal, ethical, privacy, and organizational requirements.
+
+---
+
+### 5.3 Processing
+
+Processing converts collected information into a usable format.
+
+Activities include:
+
+- Removing duplicates
+- Normalizing data
+- Validating indicators
+- Enriching records
+- Assigning confidence levels
+- Classifying intelligence
+- Extracting observables
+- Mapping attack techniques
+- Identifying relationships
+- Storing intelligence in structured repositories
+
+---
+
+### 5.4 Analysis
+
+Analysis provides meaning and context.
+
+It may include:
+
+- Threat actor profiling
+- Campaign analysis
+- Malware behavior analysis
+- Attack path analysis
+- Industry impact assessment
+- Indicator correlation
+- TTP mapping
+- Risk assessment
+- Detection opportunity identification
+- Defensive recommendation development
+
+---
+
+### 5.5 Dissemination
+
+Intelligence should be delivered to the appropriate stakeholders.
+
+Examples:
+
+- Executive threat briefings
+- SOC notifications
+- Detection engineering tickets
+- Incident response reports
+- Vulnerability prioritization reports
+- Security architecture recommendations
+- Threat hunting hypotheses
+- OT security advisories
+- Product security alerts
+
+---
+
+### 5.6 Feedback
+
+Feedback helps improve the intelligence process.
+
+Feedback may address:
+
+- Relevance
+- Accuracy
+- Timeliness
+- Usability
+- Detection effectiveness
+- False positives
+- Business impact
+- Intelligence gaps
+
+---
+
+## 6. Threat Intelligence Sources
+
+### 6.1 Internal Sources
+
+Internal intelligence sources include:
+
+- SIEM logs
+- EDR alerts
+- Network traffic
+- Firewall logs
+- DNS logs
+- Proxy logs
+- Identity logs
+- Cloud audit logs
+- Vulnerability scanners
+- Incident reports
+- Malware analysis
+- Honeypots
+- Security investigations
+- Application logs
+- OT network monitoring
+
+---
+
+### 6.2 External Sources
+
+External intelligence sources include:
+
+- National cybersecurity agencies
+- CERT advisories
+- Vendor research
+- Industry information-sharing groups
+- Security research organizations
+- Vulnerability databases
+- Threat intelligence platforms
+- Public malware repositories
+- Security blogs
+- Academic research
+- Open-source intelligence platforms
+
+External intelligence should be evaluated for:
+
+- Source credibility
+- Publication date
+- Relevance
+- Evidence quality
+- Confidence
+- Potential bias
+- Applicability to the organization
+
+---
+
+## 7. Threat Intelligence Data Formats
+
+Common formats and standards include:
+
+- STIX
+- TAXII
+- JSON
+- CSV
+- XML
+- MISP data formats
+- OpenIOC
+- YARA rules
+- Sigma rules
+- Suricata rules
+- Snort rules
+
+### 7.1 STIX
+
+Structured Threat Information Expression is used to represent and exchange threat intelligence in a structured format.
+
+It may represent:
+
+- Threat actors
+- Malware
+- Campaigns
+- Attack patterns
+- Indicators
+- Vulnerabilities
+- Infrastructure
+- Relationships
+
+---
+
+### 7.2 TAXII
+
+Trusted Automated Exchange of Intelligence Information is used to exchange cyber threat intelligence between systems.
+
+It supports automated intelligence sharing between:
+
+- Security platforms
+- Threat intelligence platforms
+- Organizations
+- Industry groups
+- Government bodies
+
+---
+
+### 7.3 MISP
+
+MISP is an open-source threat intelligence platform used for:
+
+- Intelligence sharing
+- Indicator management
+- Event correlation
+- Threat analysis
+- Collaboration
+- Structured intelligence storage
+
+---
+
+## 8. Threat Intelligence Platforms and Tools
+
+Examples of threat intelligence platforms and tools include:
+
+- MISP
+- OpenCTI
+- MITRE ATT&CK
+- VirusTotal
+- Abuse.ch resources
+- AlienVault OTX
+- YARA
+- Sigma
+- TheHive
+- Cortex
+- Malware Information Sharing Platform integrations
+- Security vendor intelligence platforms
+- SIEM threat intelligence modules
+- EDR threat intelligence modules
+
+Tools should be selected based on:
+
+- Organizational requirements
+- Data sources
+- Integration capabilities
+- Privacy requirements
+- Cost
+- Operational maturity
+- Automation needs
+- Analyst skill level
+- Industry and regulatory requirements
+
+---
+
+## 9. Threat Actors
+
+Threat actors may include:
+
+- Cybercriminal groups
+- Ransomware groups
+- Nation-state-sponsored groups
+- Hacktivists
+- Insider threats
+- Initial access brokers
+- Supply-chain attackers
+- Opportunistic attackers
+- Fraud groups
+- Industrial espionage actors
+- Script-based attackers
+
+Threat actor analysis may include:
+
+- Motivation
+- Capability
+- Resources
+- Target selection
+- Known techniques
+- Infrastructure
+- Historical campaigns
+- Geographic focus
+- Industry focus
+- Confidence level
+
+Threat actor attribution should be handled carefully. Attribution may remain uncertain and should be supported by evidence.
+
+---
+
+## 10. MITRE ATT&CK
+
+MITRE ATT&CK is a knowledge base of adversary tactics and techniques based on real-world observations.
+
+It supports:
+
+- Threat analysis
+- Detection engineering
+- Threat hunting
+- Security control mapping
+- Incident investigation
+- Purple teaming
+- Security architecture
+- Threat-informed defense
+
+Common tactics include:
+
+- Reconnaissance
+- Resource Development
+- Initial Access
+- Execution
+- Persistence
+- Privilege Escalation
+- Defense Evasion
+- Credential Access
+- Discovery
+- Lateral Movement
+- Collection
+- Command and Control
+- Exfiltration
+- Impact
+
+For industrial environments, MITRE ATT&CK for ICS provides additional context for industrial control system threats.
+
+---
+
+## 11. Indicators of Compromise
+
+Indicators of Compromise are observable artifacts that may indicate malicious activity.
+
+Examples include:
+
+- Malicious IP addresses
+- Suspicious domains
+- Malicious URLs
+- File hashes
+- Unusual file names
+- Suspicious registry keys
+- Unauthorized accounts
+- Abnormal processes
+- Unexpected services
+- Malicious email artifacts
+- Unusual DNS queries
+- Suspicious PowerShell activity
+- Unexpected network connections
+
+### Limitations of Indicators
+
+Indicators may have limitations:
+
+- They may become outdated.
+- Attackers may change infrastructure.
+- Shared infrastructure may create false positives.
+- Indicators may be reused by unrelated actors.
+- Static indicators may not detect new variants.
+- Indicators may not explain attacker behavior.
+
+Behavioral detection and TTP-based analysis should complement indicator-based detection.
+
+---
+
+## 12. Indicators of Attack
+
+Indicators of Attack focus on suspicious behavior and attack activity rather than only known artifacts.
+
+Examples include:
+
+- Repeated authentication failures
+- Unusual privilege escalation
+- Abnormal administrative activity
+- Unexpected lateral movement
+- Suspicious process chains
+- Unusual data compression
+- Large outbound data transfers
+- Abnormal service creation
+- Unexpected remote access
+- Unusual scripting activity
+- Unauthorized configuration changes
+
+Indicators of Attack can be useful for detecting previously unknown threats.
+
+---
+
+## 13. Threat Hunting Fundamentals
+
+Threat Hunting is a proactive security activity in which analysts search for threats that may have bypassed preventive and automated detection controls.
+
+Threat hunting is:
+
+- Hypothesis-driven
+- Evidence-based
+- Iterative
+- Proactive
+- Data-dependent
+- Risk-focused
+- Collaborative
+
+Threat hunting should be based on:
+
+- Threat intelligence
+- Known attack techniques
+- Business risk
+- Security incidents
+- Vulnerabilities
+- Anomalous behavior
+- Environmental changes
+- Threat actor activity
+
+---
+
+## 14. Threat Hunting Process
+
+A typical threat hunting process includes:
+
+1. Define the objective.
+2. Develop a hunting hypothesis.
+3. Identify relevant data sources.
+4. Build queries and detection logic.
+5. Investigate results.
+6. Validate findings.
+7. Document evidence.
+8. Escalate confirmed threats.
+9. Improve detection controls.
+10. Measure and communicate outcomes.
+
+---
+
+## 15. Threat Hunting Hypotheses
+
+A hunting hypothesis is a statement that can be tested using available evidence.
+
+Examples:
+
+- An attacker may be using PowerShell to execute malicious commands.
+- A compromised account may be performing unusual lateral movement.
+- A threat actor may be using scheduled tasks for persistence.
+- An attacker may be collecting credentials from endpoints.
+- A compromised cloud identity may be accessing unusual resources.
+- An attacker may be using remote services to move between systems.
+- A threat actor may be attempting to disable security tools.
+- An attacker may be modifying critical system configurations.
+- An unauthorized device may be communicating with an industrial network.
+- A compromised IoT device may be connecting to unexpected external infrastructure.
+
+A good hypothesis should be:
+
+- Specific
+- Testable
+- Relevant
+- Evidence-based
+- Time-bound
+- Aligned with organizational risk
+
+---
+
+## 16. Threat Hunting Data Sources
+
+Threat hunting may use:
+
+### Endpoint Data
+
+- Process creation
+- Command-line activity
+- File creation
+- Registry changes
+- User logons
+- Services
+- Scheduled tasks
+- Security tool events
+- Memory artifacts
+
+### Network Data
+
+- DNS logs
+- Firewall logs
+- Proxy logs
+- NetFlow
+- Packet captures
+- IDS alerts
+- VPN logs
+- Network authentication
+- East-west traffic
+
+### Identity Data
+
+- Authentication logs
+- Privileged activity
+- MFA events
+- Impossible travel events
+- New account creation
+- Group membership changes
+- Access policy changes
+
+### Cloud Data
+
+- Cloud audit logs
+- API activity
+- IAM events
+- Storage access
+- Network flow logs
+- Container activity
+- Kubernetes audit logs
+- Serverless activity
+
+### OT and ICS Data
+
+- PLC communications
+- Engineering workstation activity
+- HMI activity
+- Historian logs
+- Industrial protocol traffic
+- Remote access logs
+- Configuration changes
+- Alarm events
+- Asset discovery data
+- Network segmentation events
+
+---
+
+## 17. Threat Hunting Techniques
+
+Common techniques include:
+
+- Baseline analysis
+- Anomaly detection
+- Behavioral analysis
+- TTP-based hunting
+- Indicator pivoting
+- Timeline analysis
+- User behavior analysis
+- Process tree analysis
+- Network flow analysis
+- Authentication pattern analysis
+- DNS investigation
+- File system analysis
+- Memory analysis
+- Cloud activity analysis
+- Correlation across multiple data sources
+
+---
+
+## 18. Threat Hunting Queries
+
+Threat hunting queries may be created using:
+
+- Kusto Query Language
+- Splunk Processing Language
+- SQL
+- Elasticsearch Query DSL
+- Lucene query syntax
+- EQL
+- Sigma rules
+- YARA rules
+- Suricata rules
+- Snort rules
+- Python-based analysis
+- Jupyter notebooks
+
+Query design should consider:
+
+- Data availability
+- Query performance
+- Time range
+- Filtering logic
+- False positives
+- Investigation context
+- Data retention
+- Privacy
+- Analyst usability
+
+---
+
+## 19. Detection Engineering
+
+Threat hunting findings should be converted into improved security detections where appropriate.
+
+Detection engineering may include:
+
+- Detection rule development
+- Alert logic
+- Data source validation
+- Detection testing
+- False-positive reduction
+- Severity assignment
+- Alert enrichment
+- Case management integration
+- Detection documentation
+- Continuous tuning
+
+Detection rules may be based on:
+
+- Indicators
+- Behavioral patterns
+- Attack techniques
+- Statistical anomalies
+- Threat intelligence
+- User and entity behavior
+- Security control failures
+
+---
+
+## 20. Sigma Rules
+
+Sigma is a generic and structured detection rule format that can be translated into different SIEM query languages.
+
+A Sigma rule may define:
+
+- Rule title
+- Description
+- Log source
+- Detection logic
+- Severity
+- Tags
+- References
+- False-positive guidance
+- Author
+- Status
+
+Sigma rules support portability across security monitoring platforms.
+
+---
+
+## 21. YARA Rules
+
+YARA is used to identify and classify malware or suspicious files based on patterns.
+
+YARA may support:
+
+- Malware detection
+- File classification
+- Threat research
+- Incident response
+- Malware hunting
+- Digital forensics
+
+YARA rules should be tested carefully to avoid:
+
+- Excessive false positives
+- Overly broad matches
+- Performance issues
+- Unintended file classification
+
+---
+
+## 22. Threat Intelligence and Incident Response
+
+Threat Intelligence supports incident response by providing:
+
+- Threat actor context
+- Known indicators
+- Attack techniques
+- Malware information
+- Related campaigns
+- Recommended containment actions
+- Detection opportunities
+- Relevant vulnerabilities
+- Historical activity
+
+Incident response teams may provide feedback to threat intelligence teams through:
+
+- Newly discovered indicators
+- Attack timelines
+- Malware samples
+- Attacker techniques
+- Infrastructure information
+- Lessons learned
+- Detection gaps
+
+---
+
+## 23. Threat Intelligence and Vulnerability Management
+
+Threat intelligence can improve vulnerability prioritization.
+
+A vulnerability may require increased attention when:
+
+- It is actively exploited.
+- It affects critical assets.
+- It is associated with known campaigns.
+- Exploit code is publicly available.
+- It affects internet-facing systems.
+- It impacts operational technology.
+- It affects unsupported systems.
+- It can enable privilege escalation.
+- It can support ransomware activity.
+
+Risk-based prioritization should consider:
+
+- Asset criticality
+- Exploitability
+- Exposure
+- Business impact
+- Threat activity
+- Compensating controls
+- Availability requirements
+- Safety requirements in OT environments
+
+---
+
+## 24. Threat Intelligence for Cloud Security
+
+Cloud threat intelligence may focus on:
+
+- Identity compromise
+- API abuse
+- Cloud account takeover
+- Credential exposure
+- Misconfigured storage
+- Cryptomining
+- Container attacks
+- Kubernetes threats
+- Supply-chain compromise
+- Cloud privilege escalation
+- Unauthorized resource creation
+- Data exfiltration
+
+Relevant data sources include:
+
+- Cloud audit logs
+- Identity provider logs
+- Cloud security posture management
+- Cloud workload protection
+- API gateway logs
+- Container security tools
+- Network flow logs
+
+---
+
+## 25. Threat Intelligence for IoT Security
+
+IoT threat intelligence may address:
+
+- Default credentials
+- Vulnerable firmware
+- Exposed management interfaces
+- Botnet activity
+- Insecure protocols
+- Device impersonation
+- Malicious firmware
+- Supply-chain threats
+- Weak update mechanisms
+- Unauthorized device communication
+- Cloud-to-device attacks
+- Device identity compromise
+
+Important intelligence requirements include:
+
+- Device type
+- Manufacturer
+- Firmware version
+- Network location
+- Communication behavior
+- Known vulnerabilities
+- Update status
+- Business or operational criticality
+
+---
+
+## 26. Threat Intelligence for OT and ICS Security
+
+OT and ICS threat intelligence should consider:
+
+- Safety
+- Availability
+- Reliability
+- Process integrity
+- Engineering workstation security
+- PLC security
+- HMI security
+- Historian security
+- Industrial protocols
+- Remote access
+- Vendor access
+- Legacy systems
+- Long system lifecycles
+- Limited patching windows
+- Operational constraints
+
+Threat intelligence for OT should support:
+
+- Asset prioritization
+- Threat scenario development
+- Detection engineering
+- Network monitoring
+- Remote access governance
+- Incident response planning
+- Compensating controls
+- Safety impact analysis
+- Recovery planning
+
+Security activities must avoid disrupting industrial processes.
+
+---
+
+## 27. Threat Intelligence Sharing
+
+Threat intelligence may be shared through:
+
+- Internal security teams
+- Industry groups
+- Information Sharing and Analysis Centers
+- CERT organizations
+- Government agencies
+- Strategic suppliers
+- Managed security providers
+- Trusted business partners
+
+Information sharing should consider:
+
+- Legal requirements
+- Privacy
+- Confidentiality
+- Data classification
+- Trust relationships
+- Sharing agreements
+- Attribution confidence
+- Operational sensitivity
+- Responsible disclosure
+
+---
+
+## 28. Threat Intelligence Quality
+
+Threat intelligence quality may be evaluated using:
+
+- Accuracy
+- Relevance
+- Timeliness
+- Completeness
+- Confidence
+- Actionability
+- Source reliability
+- Detection value
+- Business impact
+- Analyst feedback
+
+A high volume of intelligence does not necessarily indicate high intelligence quality.
+
+---
+
+## 29. Threat Intelligence Metrics
+
+Possible metrics include:
+
+- Number of intelligence reports processed
+- Number of validated indicators
+- Intelligence-to-detection conversion rate
+- Number of threat hunting hypotheses tested
+- Number of confirmed findings
+- Detection coverage improvement
+- False-positive rate
+- Mean time to investigate
+- Mean time to respond
+- Intelligence processing time
+- Threat hunting frequency
+- Number of intelligence gaps
+- Number of affected assets
+- Number of active threat campaigns identified
+- Number of detection rules improved
+
+Metrics should measure meaningful security outcomes rather than only activity volume.
+
+---
+
+## 30. Threat Hunting Metrics
+
+Threat hunting metrics may include:
+
+- Number of hunts completed
+- Number of hypotheses investigated
+- Number of suspicious activities identified
+- Number of confirmed incidents
+- Number of new detections created
+- Number of existing detections improved
+- Average investigation duration
+- False-positive percentage
+- Data source coverage
+- MITRE ATT&CK coverage
+- Threat exposure reduction
+- Analyst productivity
+- Lessons learned
+
+---
+
+## 31. Roles and Responsibilities
+
+### Threat Intelligence Analyst
+
+Responsibilities include:
+
+- Intelligence collection
+- Source validation
+- Threat research
+- Indicator enrichment
+- Threat actor analysis
+- Intelligence reporting
+- Intelligence sharing
+
+### Threat Hunter
+
+Responsibilities include:
+
+- Hunting hypothesis development
+- Query creation
+- Data analysis
+- Investigation
+- Evidence collection
+- Detection improvement
+- Collaboration with SOC and incident response teams
+
+### Detection Engineer
+
+Responsibilities include:
+
+- Detection rule creation
+- Detection testing
+- Alert tuning
+- Data source integration
+- Detection documentation
+- Monitoring coverage improvement
+
+### Incident Responder
+
+Responsibilities include:
+
+- Incident investigation
+- Containment
+- Eradication
+- Recovery
+- Evidence preservation
+- Threat intelligence feedback
+
+### Security Architect
+
+Responsibilities include:
+
+- Threat-informed architecture
+- Security control design
+- Detection strategy
+- Intelligence integration
+- Enterprise risk alignment
+- OT and CPS security considerations
+
+---
+
+## 32. Practical Labs and Projects
+
+### Project 1: Threat Intelligence Repository
+
+Create a repository containing:
+
+- Threat intelligence sources
+- Intelligence requirements
+- Threat actor profiles
+- Indicator records
+- Confidence levels
+- Intelligence reports
+- Defensive recommendations
+
+---
+
+### Project 2: MISP or OpenCTI Lab
+
+Explore:
+
+- Threat event creation
+- Indicator management
+- Intelligence enrichment
+- Relationship mapping
+- Tagging
+- Sharing workflows
+- API integration
+
+---
+
+### Project 3: Threat Hunting Using Sample Logs
+
+Use sample logs to investigate:
+
+- Suspicious authentication
+- Abnormal PowerShell activity
+- Unusual DNS queries
+- Lateral movement
+- Suspicious process creation
+- Unusual outbound traffic
+
+Document:
+
+- Hunting hypothesis
+- Data sources
+- Query logic
+- Findings
+- Evidence
+- Confidence
+- Recommended actions
+
+---
+
+### Project 4: Sigma Detection Rules
+
+Create Sigma rules for:
+
+- Suspicious PowerShell
+- New administrative account
+- Credential dumping behavior
+- Scheduled task persistence
+- Suspicious remote service usage
+- Security tool tampering
+
+---
+
+### Project 5: YARA Malware Classification
+
+Create and test YARA rules for:
+
+- Suspicious file patterns
+- Malware families
+- Script-based threats
+- Embedded payloads
+- Known malicious artifacts
+
+Use only legally obtained and safely handled samples.
+
+---
+
+### Project 6: MITRE ATT&CK Mapping
+
+Map a simulated attack scenario to:
+
+- Tactics
+- Techniques
+- Sub-techniques
+- Detection opportunities
+- Mitigations
+- Relevant log sources
+
+---
+
+### Project 7: Cloud Threat Hunting
+
+Investigate simulated cloud logs for:
+
+- Unusual API calls
+- Suspicious login activity
+- Privilege escalation
+- Abnormal storage access
+- Unauthorized resource creation
+
+---
+
+### Project 8: OT Threat Hunting Scenario
+
+Develop a safe, non-disruptive hunting exercise for:
+
+- Unauthorized engineering workstation access
+- Unexpected PLC communication
+- Abnormal remote access
+- Unusual industrial protocol activity
+- Configuration changes
+- Suspicious vendor access
+
+The exercise should use simulated or offline data and must not interfere with live industrial systems.
+
+---
+
+## 33. Recommended Documentation Structure
+
+Each threat hunting or intelligence investigation should document:
+
+1. Investigation title
+2. Date and time
+3. Analyst
+4. Objective
+5. Threat intelligence source
+6. Hunting hypothesis
+7. Scope
+8. Data sources
+9. Queries used
+10. Observations
+11. Evidence
+12. Analysis
+13. Confidence level
+14. Impact assessment
+15. Recommended actions
+16. Detection improvements
+17. Lessons learned
+18. Follow-up activities
+
+---
+
+## 34. Learning Outcomes
+
+After completing this domain, the learner should be able to:
+
+- Explain Threat Intelligence concepts.
+- Differentiate strategic, operational, tactical, and technical intelligence.
+- Understand the intelligence lifecycle.
+- Identify reliable intelligence sources.
+- Work with indicators and threat context.
+- Understand STIX and TAXII.
+- Explore threat intelligence platforms.
+- Understand MITRE ATT&CK.
+- Develop threat hunting hypotheses.
+- Analyze endpoint and network data.
+- Create basic detection logic.
+- Understand Sigma and YARA.
+- Support incident response investigations.
+- Apply threat intelligence to vulnerability management.
+- Understand cloud, IoT, and OT threat intelligence.
+- Define meaningful intelligence metrics.
+- Document investigations professionally.
+- Translate intelligence into security improvements.
+
+---
+
+## 35. Global Enterprise Context
+
+Modern enterprises require threat intelligence and threat hunting capabilities that support:
+
+- Global threat visibility
+- Multi-cloud environments
+- Remote workforce security
+- Third-party risk
+- Supply-chain security
+- Product security
+- Critical infrastructure protection
+- Privacy and regulatory requirements
+- Security operations
+- Digital transformation
+- Cyber resilience
+- Business continuity
+- Industrial safety and availability
+
+Threat Intelligence and Threat Hunting should be integrated with:
+
+- Security Operations
+- Incident Response
+- Vulnerability Management
+- Governance, Risk and Compliance
+- Security Architecture
+- Cloud Security
+- Product Security
+- Application Security
+- Identity Security
+- OT and ICS Security
+
+---
+
+## 36. References and Further Learning
+
+Recommended references include:
+
+- MITRE ATT&CK
+- MITRE ATT&CK for ICS
+- STIX documentation
+- TAXII documentation
+- MISP documentation
+- OpenCTI documentation
+- Sigma documentation
+- YARA documentation
+- NIST Cybersecurity publications
+- CISA advisories
+- CERT advisories
+- Industry threat intelligence reports
+- Security vendor research
+- Open-source threat intelligence communities
+
+Always verify the relevance, date, reliability, and applicability of external intelligence before using it in operational decisions.
+
+---
+
+## 37. Conclusion
+
+Threat Intelligence provides context about cyber threats, while Threat Hunting proactively searches for malicious activity that may bypass existing security controls.
+
+A mature capability connects:
+
+- Threat intelligence
+- Security monitoring
+- Threat hunting
+- Detection engineering
+- Incident response
+- Vulnerability management
+- Security architecture
+- Business risk
+- Operational resilience
+
+For enterprise IT, cloud, IoT, OT, ICS, and cyber-physical systems, threat-informed defense supports stronger detection, faster investigation, improved resilience, and better security decision-making.
+
+**Cyber Security Spectrum by Nityashree**
+
+*Building strong cybersecurity foundations for secure digital and cyber-physical systems.*
