@@ -1,2 +1,2 @@
 # cyber-security-spectrum
-A compLinu self-paced, beginner-to-advanced cybersecurity curriculum covering security fundamentals, networking, Linux, ethical hacking, cloud, forensics, IoT/OT, governance, and emerging security domains—with practical labs and real-world projects.
+A complete self-paced, beginner-to-advanced cybersecurity curriculum covering security fundamentals, networking, Linux, ethical hacking, cloud, forensics, IoT/OT, governance, and emerging security domains—with practical labs and real-world projects.
