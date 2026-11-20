@@ -1,0 +1,38 @@
+# 1.1 Cybersecurity Foundations
+
+This section introduces the core ideas and language used throughout cybersecurity. It explains what cybersecurity protects, the outcomes it aims to achieve, and how it relates to neighboring disciplines such as information security, IT security, privacy, and resilience.
+
+These foundations provide a shared starting point for the later topics in Cyber Security Spectrum, including risk management, networking, Linux, application security, cloud security, and security operations.
+
+## Learning objectives
+
+After completing this section, you should be able to:
+
+- Define cybersecurity and describe its scope.
+- Explain confidentiality, integrity, and availability, as well as other important security objectives.
+- Recognize foundational cybersecurity principles.
+- Distinguish cybersecurity from information security and IT security.
+- Explain how cybersecurity relates to privacy and resilience.
+- Use these concepts when reading and discussing more specialized security topics.
+
+## Micro-topics
+
+1. [1.1.1 — Definition of Cybersecurity](1.1.1-Definition-of-Cybersecurity.md)
+2. [1.1.2 — Cybersecurity Objectives](1.1.2-Cybersecurity-Objectives.md)
+3. [1.1.3 — Cybersecurity Principles](1.1.3-Cybersecurity-Principles.md)
+4. [1.1.4 — Cybersecurity vs. Information Security](1.1.4-Cybersecurity-vs-Information-Security.md)
+5. [1.1.5 — Cybersecurity vs. IT Security](1.1.5-Cybersecurity-vs-IT-Security.md)
+6. [1.1.6 — Cybersecurity vs. Privacy](1.1.6-Cybersecurity-vs-Privacy.md)
+7. [1.1.7 — Cybersecurity vs. Resilience](1.1.7-Cybersecurity-vs-Resilience.md)
+
+## Suggested study order
+
+Work through the micro-topics in order. For each one, read the explanation, note unfamiliar terms, and write a short summary in your own words. You can study at your own pace and return to the last topic you completed.
+
+## Completion check
+
+You are ready to move on when you can explain the key ideas in this section and describe how cybersecurity, information security, IT security, privacy, and resilience are related but not identical.
+
+---
+
+[Back to Cybersecurity Fundamentals overview](../Cyber-Security-Fundamentals.md)
